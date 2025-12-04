@@ -31,50 +31,6 @@ Se incluye una corrección al modelo URDF. Para aplicarla:
 cd ~/ros2_ws
 colcon build --symlink-install
 source install/setup.bash
-¡Claro que sí! Un buen README es la carta de presentación de tu proyecto. Debe explicar qué hiciste, cómo funciona y cómo ejecutarlo.
-
-Aquí tienes una plantilla profesional en formato Markdown (que es lo que usa GitHub). Tienes dos opciones: una Completa (recomendada para sacar 10) y una Resumida.
-
-Copia el código de la opción que prefieras y pégalo en tu archivo Proyecto_Final/LEEME.md (o README.md si lo pones en la raíz).
-Opción 1: Profesional y Completa (Recomendada)
-
-Esta opción explica la metodología (MATLAB -> CSV -> ROS) y demuestra que entendiste todo el proceso.
-Markdown
-
-# Evaluación Cinemática y Dinámica de un Robot SCARA
-
-**Autor:** Mauricio Dariel Torbellín Sanchez  
-**Asignatura:** Robótica  
-**Periodo:** 2026-1  
-
-## 📄 Descripción del Proyecto
-Este proyecto tiene como objetivo la evaluación integral de un manipulador robótico tipo SCARA. Se realizó un análisis teórico riguroso (Cinemática Inversa, Jacobiano, Dinámica Euler-Lagrange) para validar el seguimiento de una **trayectoria elíptica**.
-
-Posteriormente, se implementó una simulación física en **ROS 2 Jazzy** y **Gazebo**, desarrollando un nodo de control en Python capaz de leer la trayectoria calculada y ejecutarla en el robot virtual.
-
-## 📂 Contenido del Repositorio
-Los archivos principales se encuentran en la carpeta `Proyecto_Final`:
-
-* **`Proyecto_Evaluacion_Robot_Final.mlx`**: Script de MATLAB con el cálculo matemático, generación de gráficas (torque, potencia, manipulabilidad) y exportación de datos.
-* **`trayectoria_scara.csv`**: Archivo de datos generado por MATLAB con los ángulos articulares calculados ($q_1, q_2, q_3$).
-* **`reproducir_trayectoria.py`**: Nodo de ROS 2 (Python) que lee el CSV, controla el robot y visualiza la trayectoria en RViz.
-* **`scara_urdf.xacro`**: Archivo de descripción del robot con las **inercias corregidas** para garantizar la estabilidad física en Gazebo.
-
-## 🚀 Instrucciones de Ejecución
-
-### 1. Requisitos
-* ROS 2 Jazzy
-* Gazebo Simulator
-* Paquetes del repositorio compilados
-
-### 2. Compilación (Importante)
-Se incluye una corrección al modelo URDF. Para aplicarla:
-
-```bash
-cd ~/ros2_ws
-colcon build --symlink-install
-source install/setup.bash
-
 3. Ejecutar Simulación
 
 En una terminal, lanzar el entorno de Gazebo:
@@ -94,3 +50,5 @@ python3 reproducir_trayectoria.py
 
 En el siguiente video se demuestra la ejecución de la trayectoria, la visualización en RViz y el comportamiento dinámico del robot:
 https://youtu.be/UkNp5Usdczg
+
+
